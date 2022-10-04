@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    AloAlo
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo1.png' %}">
+    <title>FinePro Automation</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href ="{% static 'css/bootstrap.min.css' %}" >
+    <!-- Additional CSS Files -->
+    
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" -->
+    />
+    <!--
+
+
+
+
+
+-->
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+{% block header1 %}
+  
+{% endblock %}
+
+<!--  <div id="wrapper">-->
+<!--      <div id="header">-->
+<!--          <nav class="container">-->
+<!--              <a href="index.html" class="logo">-->
+<!--                       <img src="assets/images/logo.png" alt="">-->
+<!--              </a>-->
+<!--              <ul id="main-menu">-->
+<!--                <li><a href="index.html">Home</a></li>-->
+<!--                <li><a href="">Solutions</a></li>-->
+<!--                <li><a href="">Projects</a></li>-->
+<!--                <li><a href="">About Us</a></li>-->
+<!--                <li><a href="">Contact</a></li>-->
+<!--              </ul>-->
+<!--          </nav>-->
+
+
+<!--      </div>-->
+
+<!--  </div>-->
+
+
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+
+  {% block banner5 %}
+  
+  {% endblock %}
+
+  {% block content1 %}
+  
+  {% endblock %}
+
+
+
+  
+
+<div class="logopartner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="image">
+          <img src="{% static 'images/vcast.jpg' %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="image">
+          <img src="{% static 'images/cxtech.jpg' %}" alt="">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- <div class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>Are You Looking To Travel ?</h2>
+        <h4>Make A Reservation By Clicking The Button</h4>
+      </div>
+      <div class="col-lg-4">
+        <div class="border-button">
+          <a href="reservation.html">Book Yours Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+{% block footer1 %}
+
+{% endblock %}
+  {% load static %}
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'js/isotope.min.js' %}"></script>
+  <script src="{% static 'js/owl-carousel.js' %}"></script>
+  <script src="{% static 'js/wow.js' %}"></script>
+  <script src="{% static 'js/tabs.js' %}"></script>
+  <script src="{% static 'js/popup.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+  <script>
+    function bannerSwitcher() {
+      next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+      if (next.length) next.prop('checked', true);
+      else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+      clearInterval(bannerTimer);
+      bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+  
+
+  
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('header').addClass('background-header');
+        } else {
+            $('header').removeClass('background-header');
+        }
+      });
+    });
+
+  </script>
+  <div id = "finish"></div>
+  
+  </body>
+  {% load static %}
+  <!-- Swiper JS -->
+  <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+  <!-- JavaScript -->
+  
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</html> 

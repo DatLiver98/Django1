@@ -1,0 +1,111 @@
+{% extends "pages/base.html" %}
+
+
+<!-- {% block title %}Solutions{% endblock %}  -->
+{% block header1 %}
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'home' %}" class="logo">
+                        {% load static %}
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    
+                    <ul class="nav">
+                        <li><a href="{% url 'home' %}" >Home</a></li>
+                        <li><a href="{% url 'solutions' %}" >Solutions</a>
+                            <ul class="sub-menu">
+                                <li><a href="">PLC</a></li>
+                                <li><a href="">Robot</a></li>
+                                <li><a href="">Data</a></li>
+                                <li><a href="">Machenical</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="{% url 'projects' %}" >Projects</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Coating</a></li>
+                                <li><a href="">Casting</a></li>
+                                <li><a href="">Post Processing</a></li>
+                                <li><a href="">Machining</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="base.html">003</a></li>
+                                        <li><a href="">004</a></li>
+                                        <li><a href="">BMW Mini</a></li>
+                                        <li><a href="">Washing</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'about' %}" class="active">About Us</a></li>
+                        <li><a href="{% url 'contact' %}" >Contact</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content1 %}
+{% for post in Posts %}
+    <h4>{{post.date|date:"d-m-Y"}}<a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+{% endfor %}
+{% endblock %}
+
+{% block footer1 %}
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>Company</h4>
+  	 			<ul>
+  	 				<li><a href="#">Solutions</a></li>
+  	 				<li><a href="#">Products</a></li>
+  	 				<li><a href="#">Privacy Policy</a></li>
+
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>About Us</h4>
+  	 			<ul>
+  	 				<li><a href="#">Overview</a></li>
+  	 				<li><a href="#">Location</a></li>
+  	 				<li><a href="#">News</a></li>
+  	 				<li><a href="#">Career</a></li>
+
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Contact</h4>
+  	 			<ul>
+  	 				<li><a href="#">Email</a></li>
+  	 				<li><a href="#">Hotline</a></li>
+
+  	 			</ul>
+  	 		</div>
+        </div>
+     <div class="container">-->
+         <div class="row">
+             <div class="col-lg-12">
+                 <p>Copyright ©  <a href="#">FinePro Automation</a> Company.
+
+             </div>
+         </div>
+     </div>
+
+
+
+  	 </div>
+  </footer>
+{% endblock %}
